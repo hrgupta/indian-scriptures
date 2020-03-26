@@ -1,7 +1,3 @@
 # Chache files
-.ipynb_checkpoints
 __pycache__
-
-# Python files
-
-other.py
+.ipynb_checkpoints
