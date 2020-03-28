@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Scrapy settings for upanishads project
+# Scrapy settings for scriptures project
 #
 # For simplicity, this file contains only settings considered important or
 # commonly used. You can find more settings consulting the documentation:
@@ -9,14 +9,14 @@
 #     https://docs.scrapy.org/en/latest/topics/downloader-middleware.html
 #     https://docs.scrapy.org/en/latest/topics/spider-middleware.html
 
-BOT_NAME = 'upanishads'
+BOT_NAME = 'scriptures'
 
-SPIDER_MODULES = ['upanishads.spiders']
-NEWSPIDER_MODULE = 'upanishads.spiders'
+SPIDER_MODULES = ['scriptures.spiders']
+NEWSPIDER_MODULE = 'scriptures.spiders'
 
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
-#USER_AGENT = 'upanishads (+http://www.yourdomain.com)'
+#USER_AGENT = 'scriptures (+http://www.yourdomain.com)'
 
 # Obey robots.txt rules
 ROBOTSTXT_OBEY = True
@@ -47,13 +47,13 @@ ROBOTSTXT_OBEY = True
 # Enable or disable spider middlewares
 # See https://docs.scrapy.org/en/latest/topics/spider-middleware.html
 #SPIDER_MIDDLEWARES = {
-#    'upanishads.middlewares.UpanishadsSpiderMiddleware': 543,
+#    'scriptures.middlewares.ScripturesSpiderMiddleware': 543,
 #}
 
 # Enable or disable downloader middlewares
 # See https://docs.scrapy.org/en/latest/topics/downloader-middleware.html
 #DOWNLOADER_MIDDLEWARES = {
-#    'upanishads.middlewares.UpanishadsDownloaderMiddleware': 543,
+#    'scriptures.middlewares.ScripturesDownloaderMiddleware': 543,
 #}
 
 # Enable or disable extensions
@@ -65,7 +65,7 @@ ROBOTSTXT_OBEY = True
 # Configure item pipelines
 # See https://docs.scrapy.org/en/latest/topics/item-pipeline.html
 #ITEM_PIPELINES = {
-#    'upanishads.pipelines.UpanishadsPipeline': 300,
+#    'scriptures.pipelines.ScripturesPipeline': 300,
 #}
 
 # Enable and configure the AutoThrottle extension (disabled by default)

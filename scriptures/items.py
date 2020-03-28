@@ -8,7 +8,7 @@
 import scrapy
 
 
-class UpanishadsItem(scrapy.Item):
+class ScripturesItem(scrapy.Item):
     # define the fields for your item here like:
     # name = scrapy.Field()
     pass
