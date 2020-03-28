@@ -1,6 +1,6 @@
 # Indian Scriptures
 
-This repository contains various ***Indian scriptures*** 📜 in a structured .csv format. The files contain the verses in their original Sanksrit language and their verse number.
+This repository contains various ***Indian scriptures*** 📜 in a structured .csv format. The files contain the verses in their original Sanskrit language and their verse number.
 
 The [data](https://github.com/hrgupta/indian-scriptures/tree/master/data) folder contains both raw and processed data. The *raw* data is the direct output of the scrapy spiders and the *processed* data contains data after additional processing.
 
