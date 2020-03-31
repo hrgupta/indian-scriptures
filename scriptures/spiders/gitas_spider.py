@@ -45,8 +45,7 @@ class MantraSpider(scrapy.Spider):
             yield response.follow(next_page, callback=self.parse_mantra)
 
     def check_start_page(self, page):
-        ele = page[0]
-        print(page)
+        ele = 1
         chk = True
         # Comparing each element with first item
         for item in page:
