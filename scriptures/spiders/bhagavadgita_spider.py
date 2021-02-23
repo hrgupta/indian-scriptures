@@ -3,6 +3,7 @@ from scrapy.crawler import CrawlerProcess
 
 # This class is the main spider class. It will crawl the main website.
 
+
 class MantraSpider(scrapy.Spider):
     name = "mantraspider"
 
@@ -18,10 +19,12 @@ class MantraSpider(scrapy.Spider):
 
         for mantra in response.css('div.views-field.views-field-body'):
             shloka = mantra.css('font::text').getall()
-        
-        shloka = list(map(lambda x:x.replace("\n",""),shloka)) # remove new-line chars from string
 
-        shloka = list(filter(lambda x:x != "",shloka)) # remove empty strings
+        # remove new-line chars from string
+        shloka = list(map(lambda x: x.replace("\n", ""), shloka))
+
+        # remove empty strings
+        shloka = list(filter(lambda x: x != "", shloka))
 
         yield {
             'title': response.css('h1.page-title::text').get(),
