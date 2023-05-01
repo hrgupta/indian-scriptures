@@ -17,7 +17,7 @@ cssselect==1.1.0
 decorator==4.4.2
 defusedxml==0.6.0
 entrypoints==0.3
-Flask==1.1.2
+Flask==2.3.2
 Flask-PyMongo==2.3.0
 hyperlink==19.0.0
 idna==2.9
