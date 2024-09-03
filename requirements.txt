@@ -12,7 +12,7 @@ cffi==1.14.0
 click==7.1.2
 colorama==0.4.3
 constantly==15.1.0
-cryptography==39.0.1
+cryptography==43.0.1
 cssselect==1.1.0
 decorator==4.4.2
 defusedxml==0.6.0
