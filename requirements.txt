@@ -83,7 +83,7 @@ selenium==3.141.0
 Send2Trash==1.5.0
 service-identity==18.1.0
 six==1.14.0
-soupsieve==2.0.1
+soupsieve==2.8.4
 splinter==0.14.0
 terminado==0.8.3
 testpath==0.4.4
