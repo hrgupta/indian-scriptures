@@ -1,5 +1,5 @@
 # Web scraping (scriptures/spiders)
-scrapy>=2.11
+scrapy>=2.13
 
 # Data processing (notebooks/make_*_dataset.ipynb)
 numpy>=2.0
