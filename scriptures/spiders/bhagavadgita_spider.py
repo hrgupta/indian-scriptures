@@ -7,9 +7,9 @@ from scrapy.crawler import CrawlerProcess
 class MantraSpider(scrapy.Spider):
     name = "mantraspider"
 
-    def start_requests(self):
+    async def start(self):
         start_urls = [
-            "https://www.gitasupersite.iitk.ac.in/srimad",
+            "https://old.gitasupersite.in/srimad",
         ]
         for url in start_urls:
             yield scrapy.Request(url=url, callback=self.parse_mantra)
@@ -35,7 +35,18 @@ class MantraSpider(scrapy.Spider):
 
 
 process = CrawlerProcess(
-    settings={"FEED_FORMAT": "csv", "FEED_URI": "../../data/raw/gitas/bhagavadgita.csv"}
+    settings={
+        "FEEDS": {
+            "../../data/raw/gitas/bhagavadgita.csv": {
+                "format": "csv",
+                "overwrite": True,
+            },
+        },
+        "USER_AGENT": (
+            "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 "
+            "(KHTML, like Gecko) Chrome/126.0 Safari/537.36"
+        ),
+    }
 )
 process.crawl(MantraSpider)
 process.start()
