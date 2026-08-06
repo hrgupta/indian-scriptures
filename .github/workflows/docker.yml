@@ -1,0 +1,23 @@
+# Builds the Docker image and runs a dependency smoke test.
+# The image entrypoint runs the full scraping pipeline, so the smoke
+# test overrides it with --entrypoint python (no network scraping in CI).
+
+name: Docker Build
+
+on:
+  push:
+    branches: [master]
+  pull_request:
+    branches: [master]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Build image
+        run: docker build -t indian-scriptures:ci .
+
+      - name: Smoke test
+        run: docker run --rm --entrypoint python indian-scriptures:ci -c "import scrapy, pandas, numpy, jupyter_client; print('indian-scriptures image OK')"
